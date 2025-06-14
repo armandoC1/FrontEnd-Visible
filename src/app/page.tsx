@@ -88,6 +88,7 @@ export default function CustomerSearchPage() {
                   </button>
                 )}
               </div>
+              <Link href={`/customers/create`} className="text-decoration-none fw-bold">Crear nuevo Cliente</Link>
             </div>
           </div>
 

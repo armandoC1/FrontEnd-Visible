@@ -44,7 +44,7 @@ export const seachCustomerByCountry = async (country: string) => {
 
 export const createCustomer = async (customer: Customer) => {
   try {
-    const response = await axiosInstance.post("/customsers/save", customer);
+    const response = await axiosInstance.post("/customers/save", customer);
     return response.data;
   } catch (error) {
     console.error(`Error to create customer ${error}`);
