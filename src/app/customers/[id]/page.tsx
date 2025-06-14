@@ -82,6 +82,7 @@ export default function CustomerOrdersPage() {
             <Link href="/" className="btn btn-outline-secondary">
               Volver a Búsqueda
             </Link>
+            <Link href={`/oders/create`} className="text-decoration-none fw-bold">Crear nueva Orden</Link>
           </div>
 
           {error && (
@@ -110,7 +111,6 @@ export default function CustomerOrdersPage() {
                         <th>Customer ID</th>
                         <th>Fecha de Orden</th>
                         <th>Fecha de Envío</th>
-                        <th>Estado</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -124,13 +124,6 @@ export default function CustomerOrdersPage() {
                           </td>
                           <td>{formatDate(order.orderDate)}</td>
                           <td>{formatDate(order.shippedDate)}</td>
-                          <td>
-                            {order.shippedDate ? (
-                              <span className="badge bg-success">Enviado</span>
-                            ) : (
-                              <span className="badge bg-warning text-dark">Pendiente</span>
-                            )}
-                          </td>
                         </tr>
                       ))}
                     </tbody>

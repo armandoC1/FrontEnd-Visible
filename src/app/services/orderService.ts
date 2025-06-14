@@ -36,7 +36,7 @@ export const getByCustomerId = async (customerId: number) => {
   }
 };
 
-export const saveOrders = async (order: Order) => {
+export const createOrders = async (order: Order) => {
   try {
     const response = await axiosInstance.post("/orders/save", order);
     return response.data;
